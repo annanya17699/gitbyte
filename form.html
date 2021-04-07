@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link href="formstyle.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>
+        function validateForm() {
+            var x = document.forms["myform"]["fname"].value;
+            var y = document.forms["myform"]["lname"].value;
+            var z = document.forms["myform"]["college"].value;
+            var a = document.forms["myform"]["email"].value;
+            var b = document.forms["myform"]["pwd"].value;
+            if (x == "") {
+                alert("Name must be filled out");
+                return false;
+            }
+            else if(y == "") {
+                alert("Last Name must be filled out");
+                return false;
+            }
+            else if(z == "") {
+                alert("College Name must be filled out");
+                return false;
+            }
+            else if(a == "") {
+                alert("Valid Email required!");
+                return false;
+            }
+            else if(b == "") {
+                alert("Valid Password required!");
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>GitByte</h1>
+        <h3>!!!THE TECH ZONE!!!</h3>
+    </header>
+    <section id="formpage">
+        <h2>Registration Form</h2>
+        <form id="myform" action="wallpaper.html" onsubmit="return validateForm()" method="post">
+            <fieldset>
+                <legend>We want to know you more!</legend>
+                    <label for="fname">First name:</label>
+                    <input type="text" id="fname" name="fname" placeholder="First name"autofocus><br>
+                    <label for="lname">Last name:</label>
+                    <input type="text" id="lname" name="lname" placeholder="Last name"><br>
+                    <label for="college">College name:</label>
+                    <input type="text" id="college" name="college" placeholder="College name"><br>
+                    <label for="email">Enter your email:</label>
+                    <input type="email" id="email" name="email" placeholder="abc@xyz.com"><br>
+                    <label for="pwd">Password:</label>
+                    <input type="password" id="pwd" name="pwd"><br>
+                    <input type="submit" value="Create Account">
+                    <input type="reset" value="Reset Details">
+            </fieldset>
+        </form>
+        <br>
+            <img src="bodyimg.jpg" alt="body img">
+            <img src="bodyimg2.jpg" alt="body img">
+            <img src="headerimg.jpg" alt="body img">
+    </section>
+    <footer>
+        <p>
+            Copyright @Annanya Ranjan<br>Image Source:Google
+        </p>
+            <i class="fa fa-facebook-official" aria-hidden="true"></i>
+            <i class="fa fa-instagram" aria-hidden="true"></i>
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+            <i class="fa fa-google" aria-hidden="true"></i>
+    </footer>
+</body>
+</html>
